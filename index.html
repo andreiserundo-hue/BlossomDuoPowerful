@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nancy Blossom Duo — Two Sensations. One Rose.</title>
+<meta name="description" content="The Blossom Duo: a rosebud air-pulse suction toy with a detachable tapping cap. Two toys in one. 9 modes, IPX7 waterproof, whisper-quiet. Loved by 50,000+." />
+<meta property="og:title" content="Nancy Blossom Duo — Two Sensations. One Rose." />
+<meta property="og:description" content="Air-pulse suction. Rhythmic tapping. Two sensations in one rose. 4.8★ · 50K+ sold · TikTok viral." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --lemon:#faff00;
+    --hot-pink:#f09;
+    --ink:#1a1a1a;
+    --white:#fff;
+    --grey:#f0f0f0;
+    --destructive:#f33;
+    --shadow: 8px 8px 0px 0px var(--ink);
+    --shadow-pink: 8px 8px 0px 0px var(--hot-pink);
+    --shadow-sm: 4px 4px 0px 0px var(--ink);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"DM Sans",sans-serif;
+    color:var(--ink);
+    background:var(--white);
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.5;
+  }
+  h1,h2,h3,h4,.display{font-family:"Space Grotesk","DM Sans",sans-serif;font-weight:700;}
+  .black{font-weight:700}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .container{width:100%;max-width:1180px;margin:0 auto;padding:0 20px}
+  .narrow{max-width:860px}
+  .wide{max-width:1180px}
+
+  /* Brutalist primitives */
+  .box{border:4px solid var(--ink);background:var(--white);box-shadow:var(--shadow)}
+  .box-pink{box-shadow:var(--shadow-pink)}
+  .box-sm{border:4px solid var(--ink);box-shadow:var(--shadow-sm)}
+  .uppercase{text-transform:uppercase}
+  .tight{letter-spacing:-.03em;line-height:.92}
+
+  .badge{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14px;
+    text-transform:uppercase;letter-spacing:.04em;border:3px solid var(--ink);padding:7px 14px;background:var(--white)}
+  .badge.pink{background:var(--hot-pink);color:#fff}
+  .badge.black{background:var(--ink);color:#fff}
+  .badge.red{background:var(--destructive);color:#fff}
+  .badge.lemon{background:var(--lemon);color:var(--ink)}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;cursor:pointer;
+    font-family:"Space Grotesk",sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.02em;
+    font-size:20px;padding:18px 30px;border:4px solid var(--ink);background:var(--hot-pink);color:#fff;
+    box-shadow:var(--shadow-sm);transition:transform .08s ease, box-shadow .08s ease;width:auto}
+  .btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 0 var(--ink)}
+  .btn:active{transform:translate(2px,2px);box-shadow:2px 2px 0 0 var(--ink)}
+  .btn.block{display:flex;width:100%}
+  .btn.lemon{background:var(--lemon);color:var(--ink)}
+  .btn.white{background:#fff;color:var(--ink)}
+
+  .stars{color:var(--ink);letter-spacing:2px;font-size:18px}
+  .stars.pink{color:var(--hot-pink)}
+  .dot-grid{background-image:radial-gradient(#000 2px, transparent 2px);background-size:24px 24px}
+
+  section{padding:72px 0;border-bottom:4px solid var(--ink)}
+  .eyebrow{font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:13px}
+  h2.sect{font-size:clamp(34px,6vw,64px);text-transform:uppercase;font-weight:700}
+  .lead{font-size:clamp(18px,2.4vw,22px);font-weight:500}
+
+  .grid{display:grid;gap:24px}
+  .g2{grid-template-columns:1fr 1fr}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .g4{grid-template-columns:repeat(4,1fr)}
+  .center{text-align:center}
+  .mx{margin-left:auto;margin-right:auto}
+
+  /* Announcement bar */
+  .promo{background:var(--ink);color:var(--lemon);text-align:center;font-weight:700;
+    text-transform:uppercase;letter-spacing:.05em;font-size:13px;padding:9px 16px}
+  .promo b{background:var(--lemon);color:var(--ink);padding:2px 8px;margin:0 4px}
+
+  /* Hero */
+  .hero{background:var(--lemon);position:relative;overflow:hidden;padding:56px 0 90px}
+  .hero .dot{position:absolute;inset:0;opacity:.10;pointer-events:none}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;position:relative;z-index:2}
+  .hero h1{font-size:clamp(44px,7.2vw,84px);text-transform:uppercase;font-weight:700;
+    text-shadow:4px 4px 0 #fff}
+  .hero .sub{font-size:clamp(18px,2.4vw,24px);font-weight:500;max-width:30ch;border-left:5px solid var(--ink);padding-left:20px}
+  .ticklist{list-style:none;display:flex;flex-direction:column;gap:12px;font-weight:700;font-size:18px}
+  .ticklist li{display:flex;align-items:center;gap:12px}
+  .tick{background:var(--ink);color:var(--lemon);width:26px;height:26px;display:grid;place-items:center;flex:0 0 auto;font-size:14px}
+  .hero-img-wrap{position:relative}
+  .hero-img-wrap .back{position:absolute;inset:0;background:var(--hot-pink);border:4px solid var(--ink);transform:rotate(3deg) translate(16px,16px);z-index:0}
+  .hero-img-wrap .front{position:relative;z-index:1;background:#fff;border:4px solid var(--ink);padding:8px}
+  .float-badge{position:absolute;bottom:-26px;left:-22px;z-index:3;background:#fff;border:4px solid var(--ink);
+    box-shadow:var(--shadow-sm);padding:12px 14px;transform:rotate(-4deg)}
+
+  /* problem cards */
+  .pcard{padding:30px;border:4px solid var(--ink);background:var(--grey);transition:background .2s}
+  .pcard:hover{background:var(--lemon)}
+  .pcard .ic{font-size:38px;line-height:1}
+  .pcard h3{font-size:22px;text-transform:uppercase;margin:14px 0 10px}
+
+  .panel{border:4px solid var(--ink);background:#fff;box-shadow:var(--shadow);padding:36px}
+  .vs-row{display:flex;gap:14px;align-items:flex-start;font-weight:500;font-size:17px;margin-bottom:14px}
+  .vs-ic{flex:0 0 auto;width:26px;height:26px;display:grid;place-items:center;color:#fff;margin-top:2px}
+  .vs-ic.bad{background:var(--ink)}
+  .vs-ic.good{background:var(--hot-pink)}
+
+  .stat{font-size:clamp(40px,7vw,64px);font-weight:700;line-height:1}
+
+  .imgcap{position:relative;border:4px solid var(--ink);overflow:hidden}
+  .imgcap img{width:100%;height:100%;object-fit:cover}
+  .imgcap .cap{position:absolute;left:0;right:0;bottom:0;background:var(--ink);color:#fff;
+    font-weight:700;text-transform:uppercase;padding:10px 14px;font-size:15px}
+
+  /* gallery */
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:16px}
+  .gallery .big{grid-column:span 2;grid-row:span 2}
+  .gallery .wide2{grid-column:span 2}
+  .gtile{position:relative;border:4px solid #fff;overflow:hidden}
+  .gtile img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+  .gtile:hover img{transform:scale(1.08)}
+  .gtile .lbl{position:absolute;left:14px;bottom:12px;color:#fff;font-weight:700;text-transform:uppercase;
+    font-size:clamp(18px,2vw,26px);text-shadow:2px 2px 0 rgba(0,0,0,.6)}
+
+  /* step journey */
+  .step{display:flex;gap:22px;align-items:flex-start}
+  .step .num{font-family:"Space Grotesk";font-weight:700;font-size:56px;color:transparent;
+    -webkit-text-stroke:2px var(--ink);line-height:1;flex:0 0 auto}
+  .step h3{font-size:22px;text-transform:uppercase;margin-bottom:6px}
+
+  /* compare */
+  .cmp{display:grid;grid-template-columns:1fr 1fr;gap:0}
+  .cmp .col{padding:34px;border:4px solid var(--ink)}
+  .cmp .col.bad{background:var(--grey);opacity:.85}
+  .cmp .col.good{background:#fff;box-shadow:var(--shadow-pink);position:relative;z-index:2;transform:translateY(-10px)}
+  .cmp h3{text-align:center;text-transform:uppercase;font-size:22px;border-bottom:3px solid var(--ink);padding-bottom:12px;margin-bottom:18px}
+  .cmp .good h3{color:var(--hot-pink)}
+  .cmp li{list-style:none;font-weight:700;margin:10px 0;display:flex;gap:10px;align-items:flex-start}
+
+  /* reviews */
+  .rcard{border:4px solid var(--ink);background:#fff;padding:24px;color:var(--ink)}
+  .rcard.hl{box-shadow:var(--shadow-pink);transform:translateY(-12px)}
+  .rcard .q{font-weight:500;font-style:italic;margin:12px 0 16px}
+  .rcard .who{font-weight:700;text-transform:uppercase;font-size:14px}
+  .rcard .verified{font-weight:500;text-transform:none;color:#666;font-size:13px}
+  .ugc{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .ugc .tile{aspect-ratio:1;border:4px solid var(--ink);box-shadow:var(--shadow-sm);overflow:hidden}
+  .ugc .tile img{width:100%;height:100%;object-fit:cover}
+
+  /* offer */
+  .offer{background:var(--ink);color:#fff;position:relative}
+  .offer .dot{position:absolute;inset:0;opacity:.18;background-image:radial-gradient(#777 2px, transparent 2px);background-size:26px 26px}
+  .offer h2{color:var(--lemon)}
+  .pricebox{background:var(--lemon);color:var(--ink);border:4px solid #fff;padding:34px;position:relative;
+    box-shadow:0 0 40px rgba(250,255,0,.45);max-width:440px}
+  .pricebox .old{text-decoration:line-through;text-decoration-color:var(--hot-pink);text-decoration-thickness:4px;font-weight:700;opacity:.7}
+  .pricebox .now{font-size:64px;font-weight:700;line-height:1}
+  .pricebox .seller{position:absolute;top:-18px;left:50%;transform:translateX(-50%);
+    background:var(--hot-pink);color:#fff;border:3px solid var(--ink);padding:6px 16px;font-weight:700;text-transform:uppercase;font-size:13px;white-space:nowrap}
+  .feat{display:flex;flex-direction:column;gap:10px;font-weight:700;margin:18px 0}
+  .feat li{list-style:none;display:flex;gap:10px;align-items:center}
+
+  /* countdown */
+  .countdown{display:flex;gap:10px;justify-content:center}
+  .cd{background:var(--ink);color:var(--lemon);font-family:"Space Grotesk";font-weight:700;font-size:clamp(28px,5vw,44px);
+    padding:10px 14px;min-width:74px;text-align:center;border:4px solid #fff;box-shadow:4px 4px 0 0 rgba(255,255,255,.35)}
+  .cd small{display:block;font-size:11px;letter-spacing:.15em;color:#fff;text-transform:uppercase;margin-top:6px;font-family:"DM Sans"}
+
+  /* FAQ */
+  .faq-item{border-bottom:3px solid var(--ink)}
+  .faq-q{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:22px 0;
+    font-family:"Space Grotesk";font-weight:700;font-size:19px;display:flex;justify-content:space-between;gap:16px;color:var(--ink)}
+  .faq-q .pm{flex:0 0 auto;font-size:24px;transition:transform .2s}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;font-weight:500}
+  .faq-a .inner{padding:0 0 22px}
+  .faq-item.open .faq-a{max-height:320px}
+  .faq-item.open .pm{transform:rotate(45deg)}
+
+  /* sticky bar */
+  .sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;background:#fff;border-top:4px solid var(--ink);
+    box-shadow:0 -4px 14px rgba(0,0,0,.12);padding:10px 16px;transform:translateY(120%);transition:transform .35s ease}
+  .sticky.show{transform:translateY(0)}
+  .sticky .inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .sticky .price b{color:var(--hot-pink);font-family:"Space Grotesk";font-size:22px}
+  .sticky .price s{opacity:.55}
+  .sticky .mini-cd{font-weight:700;font-size:13px;text-transform:uppercase}
+
+  footer{background:var(--ink);color:#fff;text-align:center;border-bottom:none}
+  footer .logo{font-family:"Space Grotesk";font-weight:700;text-transform:uppercase;letter-spacing:-.02em;font-size:28px}
+
+  /* responsive */
+  @media(max-width:860px){
+    section{padding:54px 0}
+    .hero-grid{grid-template-columns:1fr;gap:40px}
+    .hero{padding:40px 0 70px}
+    .g2,.g3,.g4,.cmp{grid-template-columns:1fr}
+    .cmp .col.good{transform:none}
+    .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:150px}
+    .gallery .big{grid-column:span 2;grid-row:span 1;aspect-ratio:auto}
+    .ugc{grid-template-columns:1fr 1fr}
+    .rcard.hl{transform:none}
+    .reviews-3{grid-template-columns:1fr}
+    .float-badge{left:0}
+    body{padding-bottom:84px}
+  }
+  .hide-mobile{}
+  @media(max-width:560px){.hide-mobile{display:none}}
+</style>
+</head>
+<body>
+
+<!-- PROMO BAR -->
+<div class="promo">🌹 15% OFF TODAY ONLY · USE CODE <b>ROSE15</b> · FREE DISCREET SHIPPING</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="dot dot-grid"></div>
+  <div class="container hero-grid">
+    <div style="display:flex;flex-direction:column;gap:26px;align-items:flex-start">
+      <span class="badge pink">🌹 TikTok Viral · 50M+ Views</span>
+      <h1 class="tight">Two Sensations.<br/>One <span style="color:var(--hot-pink);-webkit-text-stroke:2px #1a1a1a;">Rose.</span></h1>
+      <p class="sub">Nancy's Blossom Duo is the only rose toy with a <b>detachable tapping cap</b> — cap on for deep air-pulse suction, cap off for rhythmic tapping. Two toys. One press.</p>
+      <ul class="ticklist">
+        <li><span class="tick">✓</span> 9 Air-Pulse Suction Modes</li>
+        <li><span class="tick">✓</span> Detachable Tapping Cap = 2 Toys in 1</li>
+        <li><span class="tick">✓</span> IPX7 Waterproof · Whisper-Quiet (&lt;55dB)</li>
+        <li><span class="tick">✓</span> Body-Safe Medical-Grade Silicone</li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+        <a href="#offer" class="btn">Claim Yours →</a>
+        <div>
+          <div class="stars pink">★★★★★</div>
+          <div style="font-weight:700;font-size:14px">4.8 · 247 reviews · 50K+ sold</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-img-wrap">
+      <div class="back"></div>
+      <div class="front"><img src="images/hero.jpg" alt="Nancy Blossom Duo rose toy with detachable tapping cap" /></div>
+      <div class="float-badge">
+        <div class="stars" style="font-size:14px">★★★★★</div>
+        <div class="black" style="font-size:14px">"Best buy of 2026!"</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- PROBLEM -->
+<section>
+  <div class="container narrow center" style="display:flex;flex-direction:column;gap:18px;align-items:center">
+    <span class="badge red">⚠ Warning: The Truth About Your Pleasure</span>
+    <h2 class="sect tight">Why 80% of Women <span style="color:var(--hot-pink)">Fake It</span><br/>(And Why It's Not Your Fault)</h2>
+    <p class="lead mx" style="max-width:62ch">You've been sold a lie. Most toys are built around <b>surface vibration</b> — but 90% of your pleasure nerves sit deep inside, and one buzzing setting was never going to reach them.</p>
+  </div>
+  <div class="container" style="margin-top:44px">
+    <div class="grid g3">
+      <div class="pcard">
+        <div class="ic">🥶</div>
+        <h3>The 'Numbness' Trap</h3>
+        <p>Buzzing vibrators overstimulate the surface until you go numb instead of over the edge. Frustrating, and exhausting.</p>
+      </div>
+      <div class="pcard">
+        <div class="ic">🪫</div>
+        <h3>The 'One-Trick' Toy</h3>
+        <p>Most toys do exactly one thing. When the mood shifts, you're stuck — there's no second gear, no second sensation.</p>
+      </div>
+      <div class="pcard">
+        <div class="ic">😩</div>
+        <h3>The 'Dead Battery' Letdown</h3>
+        <p>Right when you're close… it dies. Cheap batteries ruin the moment. You deserve something that's ready every time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MECHANISM / ANATOMY -->
+<section style="background:var(--grey)">
+  <div class="container">
+    <div class="panel" style="transform:rotate(-1deg)">
+      <h3 class="uppercase" style="font-size:clamp(26px,4vw,38px);border-bottom:4px solid var(--hot-pink);padding-bottom:8px;display:inline-block;margin-bottom:18px">Science-Backed Pleasure</h3>
+      <p class="lead" style="margin-bottom:22px">Did you know the visible part of the clitoris is just the tip of the iceberg? The legs (crura) extend deep into your body — and that's exactly what most toys never reach.</p>
+      <div class="vs-row"><span class="vs-ic bad">✕</span><div><b>Standard vibes:</b> only buzz the tiny visible tip. Result? Weak, shallow orgasms.</div></div>
+      <div class="vs-row"><span class="vs-ic good">✓</span><div><b>The Blossom Duo difference:</b> air-pulse suction creates a gentle vacuum that stimulates the <i>whole</i> structure deep inside — and the tapping cap adds a second, completely different sensation on top.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SCIENCE -->
+<section style="background:var(--ink);color:#fff">
+  <div class="container">
+    <div class="center" style="margin-bottom:46px">
+      <span class="eyebrow" style="color:var(--lemon)">The Science of Sensation</span>
+      <h2 class="sect tight" style="margin:10px 0">Why Air-Pulse <span style="color:var(--lemon)">Changes Everything</span></h2>
+      <p class="lead mx" style="max-width:60ch;font-weight:500">It's not magic — it's fluid dynamics. Vibration scatters energy across the surface. Air-pulse suction focuses it.</p>
+    </div>
+    <div class="grid g3">
+      <div class="box" style="background:var(--grey);color:var(--ink);box-shadow:none;padding:30px">
+        <h3 class="uppercase" style="font-size:24px;margin-bottom:10px">The Vacuum Effect</h3>
+        <p style="font-weight:500">A soft seal forms around the clitoris. Rapid changes in air pressure gently draw blood into the erectile tissue, raising sensitivity by up to 200% in seconds.</p>
+      </div>
+      <div class="box box-pink" style="background:#fff;color:var(--ink);padding:30px;transform:translateY(-12px);z-index:3">
+        <h3 class="uppercase" style="font-size:24px;margin-bottom:10px;color:var(--hot-pink)">The Duo Difference</h3>
+        <p style="font-weight:500">Pull the cap off and the same device becomes a rhythmic <b>tapper</b> — a totally different feeling on the same spot. One toy, two ways to finish.</p>
+      </div>
+      <div class="box" style="background:var(--grey);color:var(--ink);box-shadow:none;padding:30px">
+        <h3 class="uppercase" style="font-size:24px;margin-bottom:10px">Contactless Waves</h3>
+        <p style="font-weight:500">Direct contact can desensitise nerves over time. Air pulses stimulate without pressing down — so you reach peak after peak without irritation.</p>
+      </div>
+    </div>
+    <div class="box" style="margin:42px auto 0;max-width:780px;background:var(--ink);color:#fff;border-color:var(--lemon);box-shadow:8px 8px 0 0 rgba(0,0,0,.25);padding:26px;text-align:center">
+      <div class="eyebrow" style="color:var(--lemon);margin-bottom:8px">Clinical Insight</div>
+      <p class="lead" style="font-style:italic;font-weight:500">"Vacuum clitoral therapy significantly increases clitoral blood flow, enhancing sensation and engorgement."</p>
+    </div>
+  </div>
+</section>
+
+<!-- THE DUO — signature section -->
+<section style="background:var(--lemon)">
+  <div class="container hero-grid" style="align-items:center">
+    <div class="hero-img-wrap">
+      <div class="back" style="background:var(--ink);transform:rotate(-3deg) translate(-16px,16px)"></div>
+      <div class="front"><img src="images/twopiece.jpg" alt="Cap on for suction, cap off for tapping" /></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:20px;align-items:flex-start">
+      <span class="badge black">⚡ The Headline Feature</span>
+      <h2 class="sect tight">Two Toys.<br/>One <span style="color:var(--hot-pink)">Press.</span></h2>
+      <p class="lead">Most rose toys do one thing. The Blossom Duo does both:</p>
+      <div style="display:flex;flex-direction:column;gap:14px;width:100%">
+        <div class="box-sm" style="background:#fff;padding:18px 20px"><b style="font-size:18px">🌹 Cap ON →</b> deep air-pulse <b>suction</b>, 9 rhythms, contactless and building.</div>
+        <div class="box-sm" style="background:#fff;padding:18px 20px"><b style="font-size:18px">✨ Cap OFF →</b> rhythmic <b>tapping</b> on the same spot — a completely different sensation.</div>
+      </div>
+      <p style="font-weight:700;font-size:18px">"I've spent 3x more on toys that do half as much." — Kayla R., Verified Buyer</p>
+    </div>
+  </div>
+</section>
+
+<!-- BEGINNER FRIENDLY -->
+<section>
+  <div class="container hero-grid" style="align-items:center">
+    <div style="display:flex;flex-direction:column;gap:20px;align-items:flex-start" class="order-text">
+      <span class="badge lemon">Beginner Friendly</span>
+      <h2 class="sect tight">Not Scary.<br/>Just <span style="color:var(--hot-pink)">Fun.</span></h2>
+      <p class="lead">One button. Soft, skin-like silicone. No complicated manual. The Blossom Duo is as easy to use as picking up your lipstick — designed by an all-female product team to feel inviting, never intimidating.</p>
+      <ul class="ticklist">
+        <li><span class="tick">✓</span> One-button simplicity</li>
+        <li><span class="tick">✓</span> So cute you'll want to display it</li>
+        <li><span class="tick">✓</span> Fits in a makeup bag</li>
+      </ul>
+    </div>
+    <div class="imgcap" style="box-shadow:var(--shadow);position:relative">
+      <img src="images/product_3q.jpg" alt="Blossom Duo rose" style="background:#fff" />
+      <div class="box-sm" style="position:absolute;left:18px;right:18px;bottom:18px;background:#fff;padding:18px">
+        <div class="stars pink" style="font-size:15px">★★★★★</div>
+        <p style="font-style:italic;font-weight:500;margin:8px 0">"I'd never owned a toy before. The Blossom Duo isn't scary at all — it's so cute and friendly."</p>
+        <div class="black" style="font-size:14px">— Sarah M., First-Time User</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIFESTYLE GALLERY -->
+<section style="background:var(--ink);color:#fff">
+  <div class="container">
+    <div class="center" style="margin-bottom:42px">
+      <span class="eyebrow" style="color:var(--lemon)">Your New Best Friend</span>
+      <h2 class="sect tight" style="color:var(--lemon);margin-top:8px">Designed For Your Life</h2>
+    </div>
+    <div class="gallery">
+      <div class="gtile big"><img src="images/lifestyle_pouch.jpg" alt="In a makeup bag" /><span class="lbl">Goes Anywhere</span></div>
+      <div class="gtile"><img src="images/product_topwell.jpg" alt="Top down" /><span class="lbl">Bath Ready</span></div>
+      <div class="gtile"><img src="images/product_cap_on.jpg" alt="Rose toy" /><span class="lbl">9 Modes</span></div>
+      <div class="gtile wide2"><img src="images/charging.jpg" alt="Magnetic charging" /><span class="lbl">Premium Magnetic Charging</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S IN THE BOX -->
+<section>
+  <div class="container hero-grid" style="align-items:center">
+    <div class="hero-img-wrap">
+      <div class="back" style="background:var(--ink)"></div>
+      <div class="front"><img src="images/product_clean.jpg" alt="Blossom Duo gift box contents" /></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:20px;align-items:flex-start">
+      <span class="badge black">What's In The Box</span>
+      <h2 class="sect tight">A Gift For <span style="color:var(--hot-pink)">Yourself</span></h2>
+      <p class="lead">Unboxing the Blossom Duo feels like opening a present — premium gift box, discreet design, everything you need to start tonight.</p>
+      <div class="grid g2" style="width:100%;gap:14px">
+        <div class="box-sm" style="padding:14px 16px;font-weight:700">🌹 The Rose Body</div>
+        <div class="box-sm" style="padding:14px 16px;font-weight:700">✨ Detachable Tapping Cap</div>
+        <div class="box-sm" style="padding:14px 16px;font-weight:700">🔌 Magnetic USB Charger</div>
+        <div class="box-sm" style="padding:14px 16px;font-weight:700">🎁 Premium Gift Box</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DISCRETION -->
+<section style="background:var(--hot-pink);color:#fff">
+  <div class="container center narrow">
+    <h2 class="sect tight" style="margin-bottom:18px">Powerful Enough to Curl Toes.<br/>Quiet Enough to Keep a Secret.</h2>
+    <p class="lead mx" style="max-width:60ch;margin-bottom:36px">Your pleasure is your business. Even at max power the Blossom Duo runs under 55dB — quieter than a whisper. Roommates next door, family down the hall — zero anxiety, 100% bliss.</p>
+    <div class="grid g3" style="max-width:760px;margin:0 auto">
+      <div class="box" style="background:#fff;color:var(--ink);box-shadow:none;padding:24px">
+        <div class="stat">~55<small style="font-size:18px">dB</small></div>
+        <div class="black uppercase" style="font-size:13px">Electric Toothbrush</div>
+      </div>
+      <div class="box" style="background:var(--ink);color:var(--lemon);box-shadow:none;padding:24px">
+        <div class="stat" style="color:var(--lemon)">&lt;55<small style="font-size:18px">dB</small></div>
+        <div class="black uppercase" style="font-size:13px;color:#fff">Blossom Duo</div>
+      </div>
+      <div class="box" style="background:#fff;color:var(--ink);box-shadow:none;padding:24px">
+        <div class="stat">IPX7</div>
+        <div class="black uppercase" style="font-size:13px">Fully Waterproof</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RELATIONSHIP -->
+<section>
+  <div class="container hero-grid" style="align-items:center">
+    <div style="display:flex;flex-direction:column;gap:18px;align-items:flex-start">
+      <span class="badge pink">Relationship Hack</span>
+      <h2 class="sect tight">The Third Wheel<br/>You <span style="color:var(--hot-pink)">Actually Want</span></h2>
+      <p class="lead">The Blossom Duo isn't just for solo sessions — it's the ultimate icebreaker. Friendly, cute, and two-in-one, it takes the pressure off and puts the fun back in.</p>
+      <ul class="ticklist">
+        <li><span class="tick">✓</span> Takes the pressure off both of you</li>
+        <li><span class="tick">✓</span> Two sensations to explore together</li>
+        <li><span class="tick">✓</span> The perfect gift (buy one, gift one)</li>
+      </ul>
+    </div>
+    <div class="box" style="background:var(--grey);padding:32px;transform:rotate(2deg)">
+      <h3 class="uppercase center" style="font-size:24px;margin-bottom:12px">Best Gift Ever</h3>
+      <div class="stars pink center" style="margin-bottom:10px">★★★★★</div>
+      <p class="lead center" style="font-style:italic;font-weight:500">"Got this for my partner after seeing it everywhere online. She was sceptical. Now she tells me it's the best gift I've ever given her."</p>
+      <div class="center black uppercase" style="margin-top:16px">— Daniel G., Verified Buyer</div>
+    </div>
+  </div>
+</section>
+
+<!-- BATTERY + VALUE -->
+<section style="background:var(--lemon)">
+  <div class="container center" style="margin-bottom:54px">
+    <h2 class="sect tight" style="margin-bottom:14px">Ready When You Are.<br/>Every. Single. Time.</h2>
+    <p class="lead mx" style="max-width:56ch">Nothing kills the mood like a dead battery. The Blossom Duo charges fully in under 80 minutes and delivers up to <b>65 minutes</b> of playtime — weeks of use on a single magnetic charge.</p>
+  </div>
+  <div class="container narrow center">
+    <h2 class="sect tight" style="margin-bottom:36px">Cheaper Than a Massage.<br/>Better Than <span style="color:var(--hot-pink)">Therapy.</span></h2>
+    <div class="cmp">
+      <div class="col bad">
+        <h3>1-Hour Massage</h3>
+        <div class="now" style="font-size:48px;font-weight:700">$120</div>
+        <p class="black">Lasts: 1 Day</p>
+      </div>
+      <div class="col good">
+        <span class="badge pink" style="position:absolute;top:-16px;left:50%;transform:translateX(-50%)">Smart Choice</span>
+        <h3>The Blossom Duo</h3>
+        <div class="now" style="font-size:48px;font-weight:700;color:var(--hot-pink)">$44.99</div>
+        <p class="black">Lasts: Years of Bliss</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERT -->
+<section style="background:var(--ink);color:#fff">
+  <div class="container center">
+    <span class="badge lemon">Expert Endorsement</span>
+    <div class="box" style="background:#fff;color:var(--ink);max-width:820px;margin:28px auto 0;padding:40px;box-shadow:var(--shadow)">
+      <p style="font-size:clamp(20px,3vw,30px);font-weight:700;line-height:1.25;text-align:center;margin-bottom:24px">"I frequently recommend a high-quality, beginner-friendly suction toy like this. It's particularly useful for women who find they become less responsive to vibration over time."</p>
+      <div class="center" style="border-top:3px solid var(--ink);padding-top:18px">
+        <span class="black uppercase" style="font-size:18px;display:block">Dr. Angela Wright</span>
+        <span style="font-weight:500">GP, Menopause Specialist &amp; Clinical Sexologist</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY -->
+<section>
+  <div class="container hero-grid" style="align-items:center">
+    <div class="imgcap" style="box-shadow:var(--shadow)"><img src="images/lifestyle_pouch.jpg" alt="How to use the Blossom Duo" /></div>
+    <div style="display:flex;flex-direction:column;gap:34px">
+      <div class="center" style="text-align:left">
+        <span class="eyebrow">Your Journey</span>
+        <h2 class="sect tight" style="margin-top:6px">To Effortless <span style="color:var(--hot-pink)">Pleasure</span></h2>
+      </div>
+      <div class="step"><div class="num">1</div><div><h3>Seal It &amp; Press</h3><p style="font-weight:500">Hold the nozzle against your clit and press once. The cap seals instantly — find the angle that feels right.</p></div></div>
+      <div class="step"><div class="num">2</div><div><h3>Discover the Suction</h3><p style="font-weight:500">Cycle through 9 air-pulse modes. Contactless waves surround you for deep, building satisfaction.</p></div></div>
+      <div class="step"><div class="num">3</div><div><h3>Switch to Tapping</h3><p style="font-weight:500">Pull off the cap whenever the mood shifts for rhythmic tapping — a second, completely different finish.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section style="background:var(--grey)">
+  <div class="container narrow">
+    <h2 class="sect tight center" style="margin-bottom:40px">Don't Settle For <span style="color:var(--hot-pink);text-decoration:line-through;text-decoration-thickness:4px">Less</span></h2>
+    <div class="cmp">
+      <div class="col bad">
+        <h3>Regular Rose Toys</h3>
+        <ul>
+          <li>✕ One sensation only</li>
+          <li>✕ Noisy &amp; clunky</li>
+          <li>✕ Questionable materials</li>
+          <li>✕ Shallow stimulation</li>
+          <li>✕ Frustrating experience</li>
+        </ul>
+      </div>
+      <div class="col good">
+        <h3>The Blossom Duo</h3>
+        <ul>
+          <li>✓ Suction <i>and</i> tapping in one</li>
+          <li>✓ Whisper-quiet &amp; discreet</li>
+          <li>✓ Body-safe medical silicone</li>
+          <li>✓ Deep, targeted pleasure</li>
+          <li>✓ Empowering &amp; confident</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BAD DATE -->
+<section>
+  <div class="container narrow center">
+    <h2 class="sect tight" style="margin-bottom:40px">Cheaper Than a <span style="color:var(--hot-pink)">Bad Date</span></h2>
+    <div class="grid g2">
+      <div class="box" style="padding:30px;opacity:.55;filter:grayscale(1)">
+        <h3 class="uppercase" style="font-size:22px;margin-bottom:14px">Dinner &amp; Drinks</h3>
+        <div class="now" style="font-size:44px;font-weight:700;color:#666">$80+</div>
+        <ul style="list-style:none;text-align:left;font-weight:700;margin-top:14px">
+          <li>✕ 50/50 chance of fun</li>
+          <li>✕ No guarantee of… you know</li>
+          <li>✕ Gone by morning</li>
+        </ul>
+      </div>
+      <div class="box box-pink" style="padding:30px;transform:scale(1.04)">
+        <span class="badge pink" style="margin-bottom:10px">Best Value</span>
+        <h3 class="uppercase" style="font-size:22px;margin:10px 0 4px">The Blossom Duo</h3>
+        <div class="now" style="font-size:48px;font-weight:700;color:var(--hot-pink)">$44.99</div>
+        <ul style="list-style:none;text-align:left;font-weight:700;margin-top:14px">
+          <li>✓ Two sensations, guaranteed</li>
+          <li>✓ Works every single time</li>
+          <li>✓ Years of bliss</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section style="background:var(--ink);color:#fff">
+  <div class="container">
+    <div class="center" style="margin-bottom:44px">
+      <h2 class="sect tight" style="color:#fff">Real People. <span style="color:var(--lemon)">Real Climaxes.</span></h2>
+      <div class="stars" style="color:var(--lemon);font-size:26px;letter-spacing:4px">★★★★★</div>
+      <p class="lead" style="margin-top:8px">4.8 average from 247 verified reviews — join 50,000+ who found their bliss.</p>
+    </div>
+    <div class="ugc" style="margin-bottom:30px">
+      <div class="tile"><img src="images/ugc_vanity.jpg" alt="customer" /></div>
+      <div class="tile"><img src="images/flatlay_coral.jpg" alt="customer" /></div>
+      <div class="tile"><img src="images/charging.jpg" alt="customer" /></div>
+      <div class="tile"><img src="images/lifestyle_pouch.jpg" alt="customer" /></div>
+    </div>
+    <div class="grid g3 reviews-3">
+      <div class="rcard">
+        <div class="stars" style="color:var(--ink)">★★★★★</div>
+        <div class="q">"I've tried other rose toys and they were fine. This one is not fine — it's incredible. The suction on the higher settings is unlike anything I've experienced, and the tapping cap surprised me even more."</div>
+        <div class="who">Sarah M. <span class="verified">· Verified Buyer · Apr 2026</span></div>
+      </div>
+      <div class="rcard hl">
+        <div class="stars pink">★★★★★</div>
+        <div class="q">"I was honestly blown away. The suction alone is incredible — but remove the cap and it's a completely different experience. Like having two toys in one. Best thing I've bought in years."</div>
+        <div class="who">Jessica K. <span class="verified">· Verified Buyer · Jan 2026</span></div>
+      </div>
+      <div class="rcard">
+        <div class="stars" style="color:var(--ink)">★★★★★</div>
+        <div class="q">"Two completely different experiences in one tiny device — I cannot overstate how clever this is. I've spent 3x more on toys that do half as much."</div>
+        <div class="who">Kayla R. <span class="verified">· Verified Buyer · Apr 2026</span></div>
+      </div>
+      <div class="rcard">
+        <div class="stars" style="color:var(--ink)">★★★★★</div>
+        <div class="q">"Bought two — one for me, one for my best friend for her birthday. We both texted each other the same evening. If you're deciding between one and two, just get two."</div>
+        <div class="who">Emma D. <span class="verified">· Verified Buyer · Mar 2026</span></div>
+      </div>
+      <div class="rcard hl">
+        <div class="stars pink">★★★★★</div>
+        <div class="q">"Saw this all over TikTok and finally caved. The packaging made it feel premium the moment it arrived — then the product exceeded every expectation. Powerful without being aggressive."</div>
+        <div class="who">Rachel T. <span class="verified">· Verified Buyer · Mar 2026</span></div>
+      </div>
+      <div class="rcard">
+        <div class="stars" style="color:var(--ink)">★★★★★</div>
+        <div class="q">"Got this for my partner after seeing it everywhere online. She was sceptical. Now she tells me it's the best gift I've ever given her — the detachable cap is genius."</div>
+        <div class="who">Daniel G. <span class="verified">· Verified Buyer · Feb 2026</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFER -->
+<section class="offer" id="offer">
+  <div class="dot"></div>
+  <div class="container center" style="position:relative;z-index:2">
+    <span class="badge red">⏳ Limited Batch — Almost Gone</span>
+    <h2 class="sect tight" style="margin:18px 0 10px">Choose Your Pleasure</h2>
+    <p class="lead" style="margin-bottom:8px">30-Day Risk-Free Guarantee · Free Discreet Shipping · 1-Year Warranty</p>
+
+    <div class="countdown" id="countdown" style="margin:26px 0 8px">
+      <div><div class="cd" id="cd-h">00</div><small>Hrs</small></div>
+      <div><div class="cd" id="cd-m">00</div><small>Min</small></div>
+      <div><div class="cd" id="cd-s">00</div><small>Sec</small></div>
+    </div>
+    <p style="font-weight:700;color:var(--lemon);text-transform:uppercase;letter-spacing:.05em;margin-bottom:30px">Offer ends soon · Code ROSE15 applied</p>
+
+    <div class="pricebox mx">
+      <span class="seller">🌹 Best Seller · Save $60</span>
+      <h3 class="uppercase center" style="font-size:28px;margin-bottom:6px">The Blossom Duo</h3>
+      <div class="center" style="margin-bottom:8px"><span class="old" style="font-size:24px">$104.99</span></div>
+      <div class="now center" style="text-align:center">$44.99</div>
+      <ul class="feat">
+        <li>✓ Suction + tapping (2 toys in 1)</li>
+        <li>✓ 9 air-pulse modes · IPX7 waterproof</li>
+        <li>✓ Magnetic USB · 65-min battery</li>
+        <li>✓ Premium gift box · plain-box shipping</li>
+      </ul>
+      <a href="https://nancyfinds.com/products/nancy-blossom-duo" class="btn block">Claim Yours — $44.99 →</a>
+      <p style="font-weight:700;font-size:13px;text-transform:uppercase;margin-top:14px;text-align:center">⚡ Batch #1 — only 35 of 500 left · next run 6–8 weeks</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="container narrow">
+    <h2 class="sect tight center" style="margin-bottom:30px">Frequently Asked Questions</h2>
+    <div class="faq">
+      <div class="faq-item"><button class="faq-q">Is the Blossom Duo safe to use?<span class="pm">+</span></button><div class="faq-a"><div class="inner">Absolutely. It's made from medical-grade, body-safe silicone over an ABS core — phthalate-free, latex-free, and hypoallergenic. It's also IPX7 waterproof.</div></div></div>
+      <div class="faq-item"><button class="faq-q">How does the detachable cap work?<span class="pm">+</span></button><div class="faq-a"><div class="inner">The tapping cap snaps on magnetically. Cap on = deep air-pulse suction. Cap off = rhythmic tapping on the same spot — two completely different experiences in one device.</div></div></div>
+      <div class="faq-item"><button class="faq-q">How long does the battery last?<span class="pm">+</span></button><div class="faq-a"><div class="inner">Up to 65 minutes of playtime per charge, and it charges fully via the magnetic USB cable in under 80 minutes.</div></div></div>
+      <div class="faq-item"><button class="faq-q">Will it work for me if I'm a beginner?<span class="pm">+</span></button><div class="faq-a"><div class="inner">Perfectly. One button, 9 gentle-to-intense modes, and a friendly design mean you can start slow and find the setting that's right for your body.</div></div></div>
+      <div class="faq-item"><button class="faq-q">Is shipping discreet?<span class="pm">+</span></button><div class="faq-a"><div class="inner">Always. Plain brown box, a generic return address, and a label that shows only "Goods." Free shipping on every order, dispatched within one business day.</div></div></div>
+      <div class="faq-item"><button class="faq-q">What's the return policy?<span class="pm">+</span></button><div class="faq-a"><div class="inner">A 30-day money-back guarantee. Not a fit? Send it back unopened within 30 days for a full refund. Every device is also covered by a 1-year warranty.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container" style="padding:50px 20px;display:flex;flex-direction:column;gap:14px;align-items:center">
+    <div class="logo">Nancy Finds 🌹</div>
+    <a href="#offer" class="btn lemon">Claim Yours →</a>
+    <p style="font-weight:500;opacity:.7;font-size:14px;margin-top:8px">Pleasure. Play. Community. Loved in 50+ countries.</p>
+    <p style="font-weight:500;opacity:.5;font-size:13px">© 2026 Nancy Finds (Care &amp; Bloom Limited). All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- STICKY BAR -->
+<div class="sticky" id="sticky">
+  <div class="inner">
+    <div>
+      <div class="black uppercase" style="font-size:15px;line-height:1">Nancy Blossom Duo 🌹</div>
+      <div class="price"><b>$44.99</b> <s>$104.99</s> <span class="mini-cd" style="color:var(--hot-pink)" id="mini-cd"></span></div>
+    </div>
+    <a href="#offer" class="btn" style="font-size:16px;padding:14px 24px">Get It Now →</a>
+  </div>
+</div>
+
+<script>
+  // Countdown — resets each load to a fresh ~6h window
+  (function(){
+    var end = Date.now() + 6*60*60*1000 + 17*60*1000 + 42*1000;
+    var h=document.getElementById('cd-h'),m=document.getElementById('cd-m'),s=document.getElementById('cd-s'),mini=document.getElementById('mini-cd');
+    function pad(n){return n<10?'0'+n:''+n;}
+    function tick(){
+      var d=Math.max(0,end-Date.now());
+      var hh=Math.floor(d/3.6e6), mm=Math.floor(d%3.6e6/6e4), ss=Math.floor(d%6e4/1e3);
+      if(h)h.textContent=pad(hh); if(m)m.textContent=pad(mm); if(s)s.textContent=pad(ss);
+      if(mini)mini.textContent='Ends in '+pad(hh)+':'+pad(mm)+':'+pad(ss);
+    }
+    tick(); setInterval(tick,1000);
+  })();
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(function(b){
+    b.addEventListener('click',function(){
+      var item=b.parentElement;
+      var open=item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open');});
+      if(!open)item.classList.add('open');
+    });
+  });
+
+  // Sticky bar reveal after hero
+  (function(){
+    var bar=document.getElementById('sticky');
+    var hero=document.querySelector('.hero');
+    window.addEventListener('scroll',function(){
+      if(window.scrollY > (hero?hero.offsetHeight:600)) bar.classList.add('show');
+      else bar.classList.remove('show');
+    },{passive:true});
+  })();
+</script>
+</body>
+</html>

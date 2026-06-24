@@ -1,0 +1,22 @@
+# Internal working files — kept local, not part of the public review build
+raw_assets/
+source_assets/
+video_frames/
+.claude/
+*.zip
+
+# Reference scrapes & extraction artifacts
+landing_raw.html
+pdp_raw.html
+pdp_text.txt
+extracted_landing_strings.txt
+
+# Internal strategy / prompt docs
+LANDING_PAGE_ANALYSIS.md
+BLOSSOM_DUO_PDP_NOTES.md
+IMAGE_PROMPTS.md
+IMAGE_PROMPTS_EXPANDED.md
+
+# OS / misc
+Thumbs.db
+.DS_Store
