@@ -2,6 +2,9 @@
 raw_assets/
 source_assets/
 video_frames/
+ugc_generated/
+ugc_ref_frames/
+pdp_candidates/
 .claude/
 *.zip
 

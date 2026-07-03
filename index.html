@@ -70,7 +70,7 @@
 
   section{padding:72px 0;border-bottom:4px solid var(--ink)}
   .eyebrow{font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:13px}
-  h2.sect{font-size:clamp(34px,6vw,64px);text-transform:uppercase;font-weight:700}
+  h2.sect{font-size:clamp(34px,6vw,64px);text-transform:uppercase;font-weight:700;overflow-wrap:break-word}
   .lead{font-size:clamp(18px,2.4vw,22px);font-weight:500}
 
   .grid{display:grid;gap:24px}
@@ -221,7 +221,7 @@
     font-size:11px;text-transform:uppercase;letter-spacing:.05em;padding:5px 9px;opacity:.85;pointer-events:none}
 
   /* review card UGC image */
-  .rcard .uimg{width:100%;height:160px;object-fit:cover;border:3px solid var(--ink);margin-bottom:14px;display:block}
+  .rcard .uimg{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border:3px solid var(--ink);margin-bottom:14px;display:block}
 
   /* responsive */
   @media(max-width:860px){
@@ -243,8 +243,8 @@
     .hide-mobile{display:none}
     section{padding:38px 0}
     .container{padding:0 16px}
-    h2.sect{font-size:clamp(28px,8.5vw,38px)}
-    .hero h1{font-size:clamp(40px,11vw,54px)}
+    h2.sect{font-size:clamp(24px,7.2vw,34px);line-height:1}
+    .hero h1{font-size:clamp(34px,10vw,48px)}
     .lead{font-size:17px}
     .ticklist{font-size:15px;gap:9px}
     .ticklist .tick{width:22px;height:22px}
@@ -255,7 +255,7 @@
     .hero-copy{gap:14px}
     .hero .sub{font-size:16px}
     #heroCarousel .track img{aspect-ratio:auto;height:60vw;max-height:300px}
-    .rcard .uimg{height:210px}
+    .rcard .uimg{aspect-ratio:4/5}
     /* neutralize decorative tilts that read awkward on small screens */
     .panel,.box,.rcard,.cmp .col,[class*="box-"]{transform:none !important}
     .cd{font-size:36px;min-width:66px}
@@ -633,7 +633,7 @@
 <section style="background:var(--ink);color:#fff">
   <div class="container">
     <div class="center" style="margin-bottom:44px">
-      <h2 class="sect tight" style="color:#fff">Real People. <span style="color:var(--lemon)">Real Climaxes.</span></h2>
+      <h2 class="sect tight" style="color:#fff">Real People.<br/><span style="color:var(--lemon)">Real Climaxes.</span></h2>
       <div class="stars" style="color:var(--lemon);font-size:26px;letter-spacing:4px">★★★★★</div>
       <p class="lead" style="margin-top:8px">4.8 average from 247 verified reviews — join 50,000+ who found their bliss.</p>
     </div>
@@ -645,37 +645,37 @@
     </div>
     <div class="grid g3 reviews-3">
       <div class="rcard">
-        <img class="uimg" src="images/product_3q.jpg" alt="Customer photo" loading="lazy" />
+        <img class="uimg" src="images/ugc_sarah.jpg" alt="Customer photo" loading="lazy" />
         <div class="stars" style="color:var(--ink)">★★★★★</div>
         <div class="q">"I've tried other rose toys and they were fine. This one is not fine — it's incredible. The suction on the higher settings is unlike anything I've experienced, and the tapping cap surprised me even more."</div>
         <div class="who">Sarah M. <span class="verified">· Verified Buyer · Apr 2026</span></div>
       </div>
       <div class="rcard hl">
-        <img class="uimg" src="images/twopiece.jpg" alt="Customer photo" loading="lazy" />
+        <img class="uimg" src="images/ugc_jessica.jpg" alt="Customer photo" loading="lazy" />
         <div class="stars pink">★★★★★</div>
         <div class="q">"I was honestly blown away. The suction alone is incredible — but remove the cap and it's a completely different experience. Like having two toys in one. Best thing I've bought in years."</div>
         <div class="who">Jessica K. <span class="verified">· Verified Buyer · Jan 2026</span></div>
       </div>
       <div class="rcard">
-        <img class="uimg" src="images/product_cap_on.jpg" alt="Customer photo" loading="lazy" />
+        <img class="uimg" src="images/ugc_kayla.jpg" alt="Customer photo" loading="lazy" />
         <div class="stars" style="color:var(--ink)">★★★★★</div>
         <div class="q">"Two completely different experiences in one tiny device — I cannot overstate how clever this is. I've spent 3x more on toys that do half as much."</div>
         <div class="who">Kayla R. <span class="verified">· Verified Buyer · Apr 2026</span></div>
       </div>
       <div class="rcard">
-        <img class="uimg" src="images/flatlay_coral.jpg" alt="Customer photo" loading="lazy" />
+        <img class="uimg" src="images/ugc_emma.jpg" alt="Customer photo" loading="lazy" />
         <div class="stars" style="color:var(--ink)">★★★★★</div>
         <div class="q">"Bought two — one for me, one for my best friend for her birthday. We both texted each other the same evening. If you're deciding between one and two, just get two."</div>
         <div class="who">Emma D. <span class="verified">· Verified Buyer · Mar 2026</span></div>
       </div>
       <div class="rcard hl">
-        <img class="uimg" src="images/lifestyle_pouch.jpg" alt="Customer photo" loading="lazy" />
+        <img class="uimg" src="images/ugc_rachel.jpg" alt="Customer photo" loading="lazy" />
         <div class="stars pink">★★★★★</div>
         <div class="q">"Saw this all over TikTok and finally caved. The packaging made it feel premium the moment it arrived — then the product exceeded every expectation. Powerful without being aggressive."</div>
         <div class="who">Rachel T. <span class="verified">· Verified Buyer · Mar 2026</span></div>
       </div>
       <div class="rcard">
-        <img class="uimg" src="images/charging.jpg" alt="Customer photo" loading="lazy" />
+        <img class="uimg" src="images/ugc_daniel.jpg" alt="Customer photo" loading="lazy" />
         <div class="stars" style="color:var(--ink)">★★★★★</div>
         <div class="q">"Got this for my partner after seeing it everywhere online. She was sceptical. Now she tells me it's the best gift I've ever given her — the detachable cap is genius."</div>
         <div class="who">Daniel G. <span class="verified">· Verified Buyer · Feb 2026</span></div>
