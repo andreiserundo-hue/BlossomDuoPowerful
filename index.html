@@ -32,7 +32,7 @@
     -webkit-font-smoothing:antialiased;
     line-height:1.5;
   }
-  h1,h2,h3,h4,.display{font-family:"Space Grotesk","DM Sans",sans-serif;font-weight:700;}
+  h1,h2,h3,h4,.display{font-family:"Space Grotesk","DM Sans",sans-serif;font-weight:700;overflow-wrap:break-word}
   .black{font-weight:700}
   img{max-width:100%;display:block}
   a{color:inherit;text-decoration:none}
@@ -258,6 +258,8 @@
     .rcard .uimg{aspect-ratio:4/5}
     /* neutralize decorative tilts that read awkward on small screens */
     .panel,.box,.rcard,.cmp .col,[class*="box-"]{transform:none !important}
+    /* cap the offset backdrop layers so nothing pokes past the screen edge */
+    .hero-img-wrap .back{transform:rotate(2deg) translate(8px,10px) !important}
     .cd{font-size:36px;min-width:66px}
     .sticky .inner{gap:10px}
     .sticky .btn{padding:13px 16px;font-size:14px}
