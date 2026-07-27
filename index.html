@@ -244,13 +244,15 @@
     section{padding:38px 0}
     .container{padding:0 16px}
     h2.sect{font-size:clamp(24px,7.2vw,34px);line-height:1}
-    /* headline sized so each sentence stays on ONE line at any phone width */
+    /* headlines sized so each sentence stays on ONE line at any phone width */
     h2.sect.fit2{font-size:min(calc((100vw - 36px)/16),34px);line-height:1.08}
-    .hero h1{font-size:clamp(34px,10vw,48px)}
+    h2.sect.fit2b{font-size:min(calc((100vw - 36px)/17),34px);line-height:1.08}
+    .hero h1{font-size:min(calc((100vw - 36px)/9),48px);text-align:center}
     .lead{font-size:17px}
     .ticklist{font-size:15px;gap:9px}
     .ticklist .tick{width:22px;height:22px}
     .hero-copy{align-items:center;text-align:center}
+    .hero-copy > *{align-self:center}
     .hero-copy .sub{border-left:none;border-top:4px solid var(--ink);padding:14px 0 0;text-align:center;max-width:100%}
     .hero-copy{align-items:center}
     .priceline{justify-content:center}
@@ -481,7 +483,7 @@
 <!-- DISCRETION -->
 <section style="background:var(--hot-pink);color:#fff">
   <div class="container center narrow">
-    <h2 class="sect tight" style="margin-bottom:18px">Powerful Enough to Curl Toes.<br/>Quiet Enough to Keep a Secret.</h2>
+    <h2 class="sect tight fit2b" style="margin-bottom:18px">Powerful Enough to Curl Toes.<br/>Quiet Enough to Keep a Secret.</h2>
     <p class="lead mx" style="max-width:60ch;margin-bottom:36px">Your pleasure is your business. Even at max power the Blossom Duo runs under 55dB — quieter than a whisper. Roommates next door, family down the hall — zero anxiety, 100% bliss.</p>
     <div class="grid g3" style="max-width:760px;margin:0 auto">
       <div class="box" style="background:#fff;color:var(--ink);box-shadow:none;padding:24px">
