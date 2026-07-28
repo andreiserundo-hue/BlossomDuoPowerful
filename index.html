@@ -120,8 +120,10 @@
   /* show the whole product, centered, instead of cropping it */
   .imgcap.fit{overflow:visible}
   .imgcap.fit img{height:auto;object-fit:contain;object-position:center;display:block;margin:0 auto}
-  /* keep the testimonial from covering the product — sit it below the photo */
-  .imgcap.fit .quote-card{position:static;margin:14px 0 0}
+  /* testimonial overlays the photo (comic-panel look) but sits below the product,
+     which ends at ~78% of the image height — so it breaks out of the frame instead */
+  .imgcap.fit{margin-bottom:34px}
+  .imgcap.fit .quote-card{position:absolute;top:80%;left:14px;right:14px;margin:0}
   .imgcap .cap{position:absolute;left:0;right:0;bottom:0;background:var(--ink);color:#fff;
     font-weight:700;text-transform:uppercase;padding:10px 14px;font-size:15px}
 
@@ -198,6 +200,9 @@
   .sticky .price s{opacity:.55}
   .sticky .price,.sticky .btn{white-space:nowrap}
   .sticky .sticky-cta{font-size:16px;padding:14px 24px;flex:0 0 auto}
+
+  /* primary CTAs must never wrap — scale the text to the button width instead */
+  .btn.cta-fit{white-space:nowrap}
   .sticky .mini-cd{font-weight:700;font-size:13px;text-transform:uppercase;white-space:nowrap;font-variant-numeric:tabular-nums}
 
   footer{background:var(--ink);color:#fff;text-align:center;border-bottom:none}
@@ -244,6 +249,8 @@
     .rcard.hl{transform:none}
     .reviews-3{grid-template-columns:1fr}
     .float-badge{left:-4px;top:-10px;bottom:auto}
+    /* the overlay testimonial hangs further below the frame on narrow screens */
+    .imgcap.fit{margin-bottom:120px}
     body{padding-bottom:78px}
   }
   @media(max-width:560px){
@@ -289,6 +296,7 @@
     .sticky .save-pill{font-size:11px;padding:2px 6px}
     .pricebox{padding:26px 20px}
     .pricebox .now{font-size:54px}
+    .btn.cta-fit{font-size:clamp(13px,4.1vw,20px);padding-left:12px;padding-right:12px}
   }
 </style>
 </head>
@@ -311,7 +319,7 @@
           <span class="was">$104.99</span>
           <span class="save-badge">57% Off · Save $60</span>
         </div>
-        <a href="#offer" class="btn block" style="max-width:430px">Claim Yours — 57% Off →</a>
+        <a href="#offer" class="btn block cta-fit" style="max-width:430px">Claim Yours — 57% Off →</a>
         <div style="display:flex;align-items:center;gap:10px">
           <span class="stars pink" style="font-size:16px">★★★★★</span>
           <span style="font-weight:700;font-size:14px">4.8 · 247 reviews · 50,000+ sold</span>
@@ -740,7 +748,7 @@
         <li>✓ Magnetic USB · 65-min battery</li>
         <li>✓ Premium gift box · plain-box shipping</li>
       </ul>
-      <a href="https://nancyfinds.com/products/nancy-blossom-duo" class="btn block">Claim Yours — Save 57% →</a>
+      <a href="https://nancyfinds.com/products/nancy-blossom-duo" class="btn block cta-fit">Claim Yours — Save 57% →</a>
       <p style="font-weight:700;font-size:13px;text-transform:uppercase;margin-top:14px;text-align:center">⚡ Batch #1 — only 35 of 500 left · next run 6–8 weeks</p>
     </div>
   </div>
