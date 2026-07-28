@@ -98,8 +98,8 @@
   .hero-img-wrap{position:relative}
   .hero-img-wrap .back{position:absolute;inset:0;background:var(--hot-pink);border:4px solid var(--ink);transform:rotate(3deg) translate(16px,16px);z-index:0}
   .hero-img-wrap .front{position:relative;z-index:1;background:#fff;border:4px solid var(--ink);padding:8px}
-  .float-badge{position:absolute;bottom:-26px;left:-22px;z-index:3;background:#fff;border:4px solid var(--ink);
-    box-shadow:var(--shadow-sm);padding:12px 14px;transform:rotate(-4deg)}
+  .float-badge{position:absolute;top:-14px;left:-14px;z-index:4;background:#fff;border:3px solid var(--ink);
+    box-shadow:var(--shadow-sm);padding:6px 10px;transform:rotate(-3deg)}
 
   /* problem cards */
   .pcard{padding:30px;border:4px solid var(--ink);background:var(--grey);transition:background .2s}
@@ -117,6 +117,11 @@
 
   .imgcap{position:relative;border:4px solid var(--ink);overflow:hidden}
   .imgcap img{width:100%;height:100%;object-fit:cover}
+  /* show the whole product, centered, instead of cropping it */
+  .imgcap.fit{overflow:visible}
+  .imgcap.fit img{height:auto;object-fit:contain;object-position:center;display:block;margin:0 auto}
+  /* keep the testimonial from covering the product — sit it below the photo */
+  .imgcap.fit .quote-card{position:static;margin:14px 0 0}
   .imgcap .cap{position:absolute;left:0;right:0;bottom:0;background:var(--ink);color:#fff;
     font-weight:700;text-transform:uppercase;padding:10px 14px;font-size:15px}
 
@@ -191,7 +196,9 @@
   .sticky .inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px}
   .sticky .price b{color:var(--hot-pink);font-family:"Space Grotesk";font-size:22px}
   .sticky .price s{opacity:.55}
-  .sticky .mini-cd{font-weight:700;font-size:13px;text-transform:uppercase}
+  .sticky .price,.sticky .btn{white-space:nowrap}
+  .sticky .sticky-cta{font-size:16px;padding:14px 24px;flex:0 0 auto}
+  .sticky .mini-cd{font-weight:700;font-size:13px;text-transform:uppercase;white-space:nowrap;font-variant-numeric:tabular-nums}
 
   footer{background:var(--ink);color:#fff;text-align:center;border-bottom:none}
   footer .logo{font-family:"Space Grotesk";font-weight:700;text-transform:uppercase;letter-spacing:-.02em;font-size:28px}
@@ -236,7 +243,7 @@
     .ugc{grid-template-columns:1fr 1fr}
     .rcard.hl{transform:none}
     .reviews-3{grid-template-columns:1fr}
-    .float-badge{left:0;bottom:-18px}
+    .float-badge{left:-4px;top:-10px;bottom:auto}
     body{padding-bottom:78px}
   }
   @media(max-width:560px){
@@ -265,8 +272,21 @@
     /* cap the offset backdrop layers so nothing pokes past the screen edge */
     .hero-img-wrap .back{transform:rotate(2deg) translate(8px,10px) !important}
     .cd{font-size:36px;min-width:66px}
-    .sticky .inner{gap:10px}
-    .sticky .btn{padding:13px 16px;font-size:14px}
+    .sticky .inner{gap:8px}
+    .sticky .sticky-cta{padding:12px 14px;font-size:14px}
+    /* extra-small phones: keep the whole bar on two tight lines */
+    @media(max-width:380px){
+      .sticky{padding:10px 8px}
+      .sticky .inner{gap:6px}
+      .sticky .black.uppercase{font-size:11px}
+      .sticky .mini-cd{font-size:11px}
+      .sticky .price b{font-size:16px}
+      .sticky .price s{font-size:12px}
+      .sticky .sticky-cta{padding:11px 12px;font-size:13px}
+    }
+    .sticky .price b{font-size:18px}
+    .sticky .price s{font-size:13px}
+    .sticky .save-pill{font-size:11px;padding:2px 6px}
     .pricebox{padding:26px 20px}
     .pricebox .now{font-size:54px}
   }
@@ -322,8 +342,8 @@
           </div>
         </div>
         <div class="float-badge">
-          <div class="stars" style="font-size:14px">★★★★★</div>
-          <div class="black" style="font-size:14px">"Best buy of 2026!"</div>
+          <div class="stars" style="font-size:11px">★★★★★</div>
+          <div class="black" style="font-size:11px">"Best buy of 2026!"</div>
         </div>
       </div>
     </div>
@@ -432,9 +452,9 @@
         <li><span class="tick">✓</span> Fits in a makeup bag</li>
       </ul>
     </div>
-    <div class="imgcap" style="box-shadow:var(--shadow);position:relative">
+    <div class="imgcap fit" style="box-shadow:var(--shadow);position:relative;align-self:center;height:fit-content;background:#fff">
       <img src="images/product_3q.jpg" alt="Blossom Duo rose" style="background:#fff" />
-      <div class="box-sm" style="position:absolute;left:18px;right:18px;bottom:18px;background:#fff;padding:18px">
+      <div class="box-sm quote-card" style="background:#fff;padding:18px">
         <div class="stars pink" style="font-size:15px">★★★★★</div>
         <p style="font-style:italic;font-weight:500;margin:8px 0">"I'd never owned a toy before. The Blossom Duo isn't scary at all — it's so cute and friendly."</p>
         <div class="black" style="font-size:14px">— Sarah M., First-Time User</div>
@@ -754,11 +774,11 @@
 <!-- STICKY BAR -->
 <div class="sticky" id="sticky">
   <div class="inner">
-    <div>
-      <div class="black uppercase" style="font-size:13px;line-height:1.2">Blossom Duo 🌹 <span class="mini-cd" style="color:var(--hot-pink)" id="mini-cd"></span></div>
+    <div style="min-width:0">
+      <div class="black uppercase" style="font-size:12px;line-height:1.2;white-space:nowrap">Blossom Duo 🌹 <span class="mini-cd" style="color:var(--hot-pink)" id="mini-cd"></span></div>
       <div class="price"><b>$44.99</b> <s>$104.99</s> <span class="save-pill">-57%</span></div>
     </div>
-    <a href="#offer" class="btn" style="font-size:16px;padding:14px 24px">Get It Now →</a>
+    <a href="#offer" class="btn sticky-cta">Get It Now →</a>
   </div>
 </div>
 
