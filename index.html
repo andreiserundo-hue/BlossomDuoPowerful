@@ -89,7 +89,7 @@
   .hero{background:var(--lemon);position:relative;overflow:hidden;padding:56px 0 90px}
   .hero .dot{position:absolute;inset:0;opacity:.10;pointer-events:none}
   .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;position:relative;z-index:2}
-  .hero h1{font-size:clamp(44px,7.2vw,84px);text-transform:uppercase;font-weight:700;
+  .hero h1{font-size:clamp(30px,3.55vw,46px);text-transform:uppercase;font-weight:700;
     text-shadow:4px 4px 0 #fff}
   .hero .sub{font-size:clamp(18px,2.4vw,24px);font-weight:500;max-width:30ch;border-left:5px solid var(--ink);padding-left:20px}
   .ticklist{list-style:none;display:flex;flex-direction:column;gap:12px;font-weight:700;font-size:18px}
@@ -232,6 +232,35 @@
   .carousel .swipe-hint{position:absolute;top:10px;right:10px;z-index:3;background:var(--ink);color:#fff;font-weight:700;
     font-size:11px;text-transform:uppercase;letter-spacing:.05em;padding:5px 9px;opacity:.85;pointer-events:none}
 
+  /* ===== reviews (matches original layout) ===== */
+  .bigstars{color:var(--lemon);-webkit-text-stroke:1.5px var(--ink);font-size:34px;letter-spacing:4px;line-height:1}
+  .invert-box{background:var(--ink);color:#fff;padding:0 10px;display:inline-block}
+
+  .ugcgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:48px}
+  .utile{position:relative;aspect-ratio:1;overflow:hidden;border:4px solid var(--ink);
+    box-shadow:4px 4px 0 0 var(--ink);cursor:pointer;transition:box-shadow .2s}
+  .utile:hover{box-shadow:8px 8px 0 0 var(--hot-pink)}
+  .utile img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+  .utile:hover img{transform:scale(1.1)}
+  .utile .ov{position:absolute;inset:0;display:grid;place-items:center;background:rgba(0,0,0,0);transition:background .25s}
+  .utile:hover .ov{background:rgba(0,0,0,.4)}
+  .utile .cap{opacity:0;transform:translateY(14px) rotate(-2deg);transition:opacity .3s,transform .3s;
+    background:#fff;color:var(--ink);border:2px solid var(--ink);padding:4px 12px;
+    font-weight:700;font-size:13px;text-transform:uppercase;text-align:center;line-height:1.2}
+  .utile:hover .cap{opacity:1;transform:translateY(0) rotate(-2deg)}
+
+  .rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+  .rcard2{padding:24px;border:4px solid var(--ink);background:var(--grey);color:var(--ink)}
+  .rcard2.hl{background:#fff;box-shadow:8px 8px 0 0 var(--hot-pink);transform:translateY(-16px)}
+  .rcard2 .hd{font-family:"Space Grotesk",sans-serif;font-weight:700;text-transform:uppercase;
+    font-size:18px;margin:12px 0 8px;line-height:1.15}
+  .rcard2 .qt{font-size:14px;font-weight:500;color:#666;margin-bottom:18px;line-height:1.5}
+  .rcard2 .who2{display:flex;align-items:center;gap:12px}
+  .rcard2 .av{width:44px;height:44px;border-radius:50%;border:2px solid var(--ink);overflow:hidden;flex:0 0 auto;display:block}
+  .rcard2 .av img{width:100%;height:100%;object-fit:cover}
+  .rcard2 .nm{font-weight:700;font-size:14px;display:block}
+  .rcard2 .vf{font-size:12px;color:#16a34a;font-weight:700;display:block}
+
   /* review card UGC image */
   .rcard .uimg{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border:3px solid var(--ink);margin-bottom:14px;display:block}
 
@@ -248,6 +277,13 @@
     .ugc{grid-template-columns:1fr 1fr}
     .rcard.hl{transform:none}
     .reviews-3{grid-template-columns:1fr}
+    /* reviews: 2-up photo grid, stacked cards — captions always visible (no hover on touch) */
+    .ugcgrid{grid-template-columns:1fr 1fr;gap:10px;margin-bottom:32px}
+    .utile{box-shadow:3px 3px 0 0 var(--ink)}
+    .utile .ov{align-items:end;background:linear-gradient(to top,rgba(0,0,0,.55),rgba(0,0,0,0) 55%)}
+    .ugcgrid .utile .cap{opacity:1;transform:translateY(0) rotate(-2deg);margin-bottom:8px;font-size:11px;padding:3px 8px}
+    .rgrid{grid-template-columns:1fr;gap:18px}
+    .rcard2.hl{transform:none}
     .float-badge{left:-4px;top:-10px;bottom:auto}
     /* the overlay testimonial hangs further below the frame on narrow screens */
     .imgcap.fit{margin-bottom:120px}
@@ -261,7 +297,7 @@
     /* headlines sized so each sentence stays on ONE line at any phone width */
     h2.sect.fit2{font-size:min(calc((100vw - 36px)/16),34px);line-height:1.08}
     h2.sect.fit2b{font-size:min(calc((100vw - 36px)/17),34px);line-height:1.08}
-    .hero h1{font-size:min(calc((100vw - 36px)/9),48px);text-align:center}
+    .hero h1{font-size:min(calc((100vw - 36px)/12),48px);text-align:center}
     .lead{font-size:17px}
     .ticklist{font-size:15px;gap:9px}
     .ticklist .tick{width:22px;height:22px}
@@ -311,7 +347,7 @@
   <div class="container hero-grid">
     <div class="hero-copy" style="display:flex;flex-direction:column;gap:18px;align-items:flex-start">
       <span class="badge pink">🌹 TikTok Viral · 50,000+ Sold</span>
-      <h1 class="tight">Two Sensations.<br/>One <span style="color:var(--hot-pink);-webkit-text-stroke:2px #1a1a1a;">Rose.</span></h1>
+      <h1 class="tight">The Rose That Made<br/>50,000+ Women <span style="color:var(--hot-pink);-webkit-text-stroke:2px #1a1a1a;">Scream</span></h1>
       <p class="sub">The only rose with a <b>detachable cap</b> — cap on for air-pulse suction, cap off for rhythmic tapping. <b>Two toys. One press.</b></p>
       <div class="hero-offer">
         <div class="priceline">
@@ -409,7 +445,7 @@
     <div class="grid g3">
       <div class="box" style="background:var(--grey);color:var(--ink);box-shadow:none;padding:30px">
         <h3 class="uppercase" style="font-size:24px;margin-bottom:10px">The Vacuum Effect</h3>
-        <p style="font-weight:500">A soft seal forms around the clitoris. Rapid changes in air pressure gently draw blood into the erectile tissue, raising sensitivity by up to 200% in seconds.</p>
+        <p style="font-weight:500">A soft seal forms around the clitoris, and rapid changes in air pressure create a gentle pulling sensation — nothing else feels quite like it.</p>
       </div>
       <div class="box box-pink" style="background:#fff;color:var(--ink);padding:30px;transform:translateY(-12px);z-index:3">
         <h3 class="uppercase" style="font-size:24px;margin-bottom:10px;color:var(--hot-pink)">The Duo Difference</h3>
@@ -421,8 +457,8 @@
       </div>
     </div>
     <div class="box" style="margin:42px auto 0;max-width:780px;background:var(--ink);color:#fff;border-color:var(--lemon);box-shadow:8px 8px 0 0 rgba(0,0,0,.25);padding:26px;text-align:center">
-      <div class="eyebrow" style="color:var(--lemon);margin-bottom:8px">Clinical Insight</div>
-      <p class="lead" style="font-style:italic;font-weight:500">"Vacuum clitoral therapy significantly increases clitoral blood flow, enhancing sensation and engorgement."</p>
+      <div class="eyebrow" style="color:var(--lemon);margin-bottom:8px">Why It Feels Different</div>
+      <p class="lead" style="font-style:italic;font-weight:500">"Air-pulse suction never presses down — so instead of going numb, it keeps building."</p>
     </div>
   </div>
 </section>
@@ -576,19 +612,6 @@
   </div>
 </section>
 
-<!-- EXPERT -->
-<section style="background:var(--ink);color:#fff">
-  <div class="container center">
-    <span class="badge lemon">Expert Endorsement</span>
-    <div class="box" style="background:#fff;color:var(--ink);max-width:820px;margin:28px auto 0;padding:40px;box-shadow:var(--shadow)">
-      <p style="font-size:clamp(20px,3vw,30px);font-weight:700;line-height:1.25;text-align:center;margin-bottom:24px">"I frequently recommend a high-quality, beginner-friendly suction toy like this. It's particularly useful for women who find they become less responsive to vibration over time."</p>
-      <div class="center" style="border-top:3px solid var(--ink);padding-top:18px">
-        <span class="black uppercase" style="font-size:18px;display:block">Dr. Angela Wright</span>
-        <span style="font-weight:500">GP, Menopause Specialist &amp; Clinical Sexologist</span>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- JOURNEY -->
 <section>
@@ -664,55 +687,61 @@
 </section>
 
 <!-- REVIEWS -->
-<section style="background:var(--ink);color:#fff">
+<section style="background:#fff">
   <div class="container">
     <div class="center" style="margin-bottom:44px">
-      <h2 class="sect tight" style="color:#fff">Real People.<br/><span style="color:var(--lemon)">Real Climaxes.</span></h2>
-      <div class="stars" style="color:var(--lemon);font-size:26px;letter-spacing:4px">★★★★★</div>
-      <p class="lead" style="margin-top:8px">4.8 average from 247 verified reviews — join 50,000+ who found their bliss.</p>
+      <div class="bigstars">★★★★★</div>
+      <h2 class="sect tight" style="margin:14px 0 10px">Real People. <span class="invert-box">Real Climaxes.</span></h2>
+      <p style="font-size:clamp(17px,2.2vw,20px);font-weight:500;color:#666">Join 50,000+ happy customers who found their bliss.</p>
     </div>
-    <div class="ugc" style="margin-bottom:30px">
-      <div class="tile"><img src="images/ugc_vanity.jpg" alt="customer" /></div>
-      <div class="tile"><img src="images/flatlay_coral.jpg" alt="customer" /></div>
-      <div class="tile"><img src="images/charging.jpg" alt="customer" /></div>
-      <div class="tile"><img src="images/lifestyle_pouch.jpg" alt="customer" /></div>
+
+    <div class="ugcgrid">
+      <div class="utile"><img src="images/ugc_sarah.jpg" alt="Customer review" loading="lazy" /><div class="ov"><span class="cap">Best purchase ever!</span></div></div>
+      <div class="utile"><img src="images/ugc_jessica.jpg" alt="Customer review" loading="lazy" /><div class="ov"><span class="cap">So cute &amp; powerful</span></div></div>
+      <div class="utile"><img src="images/ugc_kayla.jpg" alt="Customer review" loading="lazy" /><div class="ov"><span class="cap">Tiny but mighty</span></div></div>
+      <div class="utile"><img src="images/ugc_rachel.jpg" alt="Customer review" loading="lazy" /><div class="ov"><span class="cap">Love the packaging</span></div></div>
+      <div class="utile"><img src="images/ugc_emma.jpg" alt="Customer review" loading="lazy" /><div class="ov"><span class="cap">Game changer</span></div></div>
+      <div class="utile"><img src="images/ugc_daniel.jpg" alt="Customer review" loading="lazy" /><div class="ov"><span class="cap">Highly recommend</span></div></div>
+      <div class="utile"><img src="images/ugc_vanity.jpg" alt="Customer review" loading="lazy" /><div class="ov"><span class="cap">Worth every penny</span></div></div>
+      <div class="utile"><img src="images/lifestyle_pouch.jpg" alt="Customer review" loading="lazy" /><div class="ov"><span class="cap">My new favorite</span></div></div>
     </div>
-    <div class="grid g3 reviews-3">
-      <div class="rcard">
-        <img class="uimg" src="images/ugc_sarah.jpg" alt="Customer photo" loading="lazy" />
-        <div class="stars" style="color:var(--ink)">★★★★★</div>
-        <div class="q">"I've tried other rose toys and they were fine. This one is not fine — it's incredible. The suction on the higher settings is unlike anything I've experienced, and the tapping cap surprised me even more."</div>
-        <div class="who">Sarah M. <span class="verified">· Verified Buyer · Apr 2026</span></div>
+
+    <div class="rgrid">
+      <div class="rcard2">
+        <div class="stars" style="color:var(--ink);font-size:16px">★★★★★</div>
+        <h4 class="hd">"Nothing else compares"</h4>
+        <p class="qt">"I've tried other rose toys and they were fine. This one is not fine — it's incredible. The suction on the higher settings is unlike anything I've experienced, and the tapping cap surprised me even more."</p>
+        <div class="who2"><span class="av"><img src="images/ugc_sarah.jpg" alt="" loading="lazy" /></span><span><span class="nm">Sarah M.</span><span class="vf">✓ Verified Buyer</span></span></div>
       </div>
-      <div class="rcard hl">
-        <img class="uimg" src="images/ugc_jessica.jpg" alt="Customer photo" loading="lazy" />
-        <div class="stars pink">★★★★★</div>
-        <div class="q">"I was honestly blown away. The suction alone is incredible — but remove the cap and it's a completely different experience. Like having two toys in one. Best thing I've bought in years."</div>
-        <div class="who">Jessica K. <span class="verified">· Verified Buyer · Jan 2026</span></div>
+      <div class="rcard2 hl">
+        <div class="stars pink" style="font-size:16px">★★★★★</div>
+        <h4 class="hd">"Like two toys in one"</h4>
+        <p class="qt">"I was honestly blown away. The suction alone is incredible — but remove the cap and it's a completely different experience. Best thing I've bought in years."</p>
+        <div class="who2"><span class="av"><img src="images/ugc_jessica.jpg" alt="" loading="lazy" /></span><span><span class="nm">Jessica K.</span><span class="vf">✓ Verified Buyer</span></span></div>
       </div>
-      <div class="rcard">
-        <img class="uimg" src="images/ugc_kayla.jpg" alt="Customer photo" loading="lazy" />
-        <div class="stars" style="color:var(--ink)">★★★★★</div>
-        <div class="q">"Two completely different experiences in one tiny device — I cannot overstate how clever this is. I've spent 3x more on toys that do half as much."</div>
-        <div class="who">Kayla R. <span class="verified">· Verified Buyer · Apr 2026</span></div>
+      <div class="rcard2">
+        <div class="stars" style="color:var(--ink);font-size:16px">★★★★★</div>
+        <h4 class="hd">"I've spent 3x more for less"</h4>
+        <p class="qt">"Two completely different experiences in one tiny device — I cannot overstate how clever this is. I've spent 3x more on toys that do half as much."</p>
+        <div class="who2"><span class="av"><img src="images/ugc_kayla.jpg" alt="" loading="lazy" /></span><span><span class="nm">Kayla R.</span><span class="vf">✓ Verified Buyer</span></span></div>
       </div>
-      <div class="rcard">
-        <img class="uimg" src="images/ugc_emma.jpg" alt="Customer photo" loading="lazy" />
-        <div class="stars" style="color:var(--ink)">★★★★★</div>
-        <div class="q">"Bought two — one for me, one for my best friend for her birthday. We both texted each other the same evening. If you're deciding between one and two, just get two."</div>
-        <div class="who">Emma D. <span class="verified">· Verified Buyer · Mar 2026</span></div>
+      <div class="rcard2">
+        <div class="stars" style="color:var(--ink);font-size:16px">★★★★★</div>
+        <h4 class="hd">"Just get two"</h4>
+        <p class="qt">"Bought two — one for me, one for my best friend for her birthday. We both texted each other the same evening. If you're deciding between one and two, just get two."</p>
+        <div class="who2"><span class="av"><img src="images/ugc_emma.jpg" alt="" loading="lazy" /></span><span><span class="nm">Emma D.</span><span class="vf">✓ Verified Buyer</span></span></div>
       </div>
-      <div class="rcard hl">
-        <img class="uimg" src="images/ugc_rachel.jpg" alt="Customer photo" loading="lazy" />
-        <div class="stars pink">★★★★★</div>
-        <div class="q">"Saw this all over TikTok and finally caved. The packaging made it feel premium the moment it arrived — then the product exceeded every expectation. Powerful without being aggressive."</div>
-        <div class="who">Rachel T. <span class="verified">· Verified Buyer · Mar 2026</span></div>
+      <div class="rcard2 hl">
+        <div class="stars pink" style="font-size:16px">★★★★★</div>
+        <h4 class="hd">"Worth the TikTok hype"</h4>
+        <p class="qt">"Saw this all over TikTok and finally caved. The packaging made it feel premium the moment it arrived — then the product exceeded every expectation."</p>
+        <div class="who2"><span class="av"><img src="images/ugc_rachel.jpg" alt="" loading="lazy" /></span><span><span class="nm">Rachel T.</span><span class="vf">✓ Verified Buyer</span></span></div>
       </div>
-      <div class="rcard">
-        <img class="uimg" src="images/ugc_daniel.jpg" alt="Customer photo" loading="lazy" />
-        <div class="stars" style="color:var(--ink)">★★★★★</div>
-        <div class="q">"Got this for my partner after seeing it everywhere online. She was sceptical. Now she tells me it's the best gift I've ever given her — the detachable cap is genius."</div>
-        <div class="who">Daniel G. <span class="verified">· Verified Buyer · Feb 2026</span></div>
+      <div class="rcard2">
+        <div class="stars" style="color:var(--ink);font-size:16px">★★★★★</div>
+        <h4 class="hd">"Best gift I've ever given"</h4>
+        <p class="qt">"Got this for my partner after seeing it everywhere online. She was sceptical. Now she tells me it's the best gift I've ever given her — the detachable cap is genius."</p>
+        <div class="who2"><span class="av"><img src="images/ugc_daniel.jpg" alt="" loading="lazy" /></span><span><span class="nm">Daniel G.</span><span class="vf">✓ Verified Buyer</span></span></div>
       </div>
     </div>
   </div>
