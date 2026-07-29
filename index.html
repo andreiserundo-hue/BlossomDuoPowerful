@@ -89,8 +89,11 @@
   .hero{background:var(--lemon);position:relative;overflow:hidden;padding:56px 0 90px}
   .hero .dot{position:absolute;inset:0;opacity:.10;pointer-events:none}
   .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;position:relative;z-index:2}
-  .hero h1{font-size:clamp(30px,3.55vw,46px);text-transform:uppercase;font-weight:700;
+  .hero h1{font-size:clamp(36px,4.4vw,55px);text-transform:uppercase;font-weight:700;
     text-shadow:4px 4px 0 #fff}
+  /* highlighted word — white box, pink type, like the original */
+  .hl-box{background:#fff;color:var(--hot-pink);border:3px solid var(--ink);
+    padding:0 14px;display:inline-block;text-shadow:none;line-height:1.05}
   .hero .sub{font-size:clamp(18px,2.4vw,24px);font-weight:500;max-width:30ch;border-left:5px solid var(--ink);padding-left:20px}
   .ticklist{list-style:none;display:flex;flex-direction:column;gap:12px;font-weight:700;font-size:18px}
   .ticklist li{display:flex;align-items:center;gap:12px}
@@ -297,7 +300,8 @@
     /* headlines sized so each sentence stays on ONE line at any phone width */
     h2.sect.fit2{font-size:min(calc((100vw - 36px)/16),34px);line-height:1.08}
     h2.sect.fit2b{font-size:min(calc((100vw - 36px)/17),34px);line-height:1.08}
-    .hero h1{font-size:min(calc((100vw - 36px)/12),48px);text-align:center}
+    .hero h1{font-size:min(calc((100vw - 36px)/10.6),48px);text-align:center}
+    .hl-box{padding:0 10px;border-width:2px}
     .lead{font-size:17px}
     .ticklist{font-size:15px;gap:9px}
     .ticklist .tick{width:22px;height:22px}
@@ -347,7 +351,7 @@
   <div class="container hero-grid">
     <div class="hero-copy" style="display:flex;flex-direction:column;gap:18px;align-items:flex-start">
       <span class="badge pink">🌹 TikTok Viral · 50,000+ Sold</span>
-      <h1 class="tight">The Rose That Made<br/>50,000+ Women <span style="color:var(--hot-pink);-webkit-text-stroke:2px #1a1a1a;">Scream</span></h1>
+      <h1 class="tight">The Rose That Made<br/>50,000+ Women<br/><span class="hl-box">Scream</span></h1>
       <p class="sub">The only rose with a <b>detachable cap</b> — cap on for air-pulse suction, cap off for rhythmic tapping. <b>Two toys. One press.</b></p>
       <div class="hero-offer">
         <div class="priceline">
